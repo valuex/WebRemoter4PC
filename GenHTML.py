@@ -25,7 +25,9 @@ def gen_cmd_html():
         CmdType=iDic['CmdType']
         CMDContent=iDic['CMDContent']
         ShowName=iDic['CMDTextIcon']+" "+iDic['ShowName']
-        
+        ShowInHomePage=iDic['ShowInHomePage'].lower()
+        if "false" in ShowInHomePage:     
+            continue        
         iCMD=f"""
             <form action="/" method="post">
             <input type="hidden" name="CmdType" value="{CmdType}">
