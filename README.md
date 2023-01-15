@@ -62,7 +62,10 @@ using your phone or pad's voice IME to input the command into the command-box an
   * You can use multiple instance for different controlling purpose
 
 ### Screenshots
-
+**Mobile**  
+<img src="https://github.com/valuex/WebRemoter4PC/blob/main/Mobile.png" height="100">  
+**PC**  
+<img src="https://github.com/valuex/WebRemoter4PC/blob/main/PC.png" height="100">
 
 
 
