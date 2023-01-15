@@ -1,0 +1,122 @@
+
+    <html>
+      <meta http-equiv="=Content-Type" content="text/html"; charset="UTF-8"/>
+    <style type="text/css">
+        body {background-color:white;}
+        p {color:blue;}
+        tr, td {
+            border-style:solid;
+            border-color: #96D4D4;
+            }
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-gap: 1rem;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          }
+          .button {
+          background-color: dodgerblue;
+          color: white;
+          padding: 1rem;
+          height: 10rem;
+          font-size:2.5rem;
+          white-space:normal;
+          border-radius:1rem;
+        }
+        #in_cmd{
+          position: relative;
+          padding-top: 5rem;
+          /* padding: 5rem; */
+          height: 10rem;
+          width: 50rem;
+          font-size:4rem;
+        }
+        .BtnSubmitTextCmd{
+          padding: 1rem;
+          height: 10rem;
+          font-size:4rem;
+        }
+        </style>
+  <script>
+
+  </script>
+<title>网页遥控器</title>
+
+    <body>
+    <div>
+    <div class="container">
+    <form action="/" method="post">
+    <nobr>
+      <table>
+        <tr>
+          <td><label>语音命令</label>
+          </td>
+          <td>
+      <input type="hidden" name="CmdType" value="JsonURL">
+      <input type="text" id="in_cmd" name="InCMD" class="inbox"><br><br>
+    </td>
+    <td>
+      <input type="submit" value="提交" class="BtnSubmitTextCmd"></td>
+    </tr>
+    </table>
+  </nobr>
+</form> 
+  </div>
+    
+        <div class="container">
+        
+            <form action="/" method="post">
+            <input type="hidden" name="CmdType" value="JsonURL">
+            <input type="hidden" name="InCMD" value="https://tv.cctv.com/live/cctv1">
+            <input type="submit" value="&#x270B CCTV1 综合" class="button">
+            </form>
+        
+            <form action="/" method="post">
+            <input type="hidden" name="CmdType" value="JsonURL">
+            <input type="hidden" name="InCMD" value="https://tv.cctv.com/live/cctv2">
+            <input type="submit" value="&#x270B CCTV2 财经" class="button">
+            </form>
+        
+            <form action="/" method="post">
+            <input type="hidden" name="CmdType" value="JsonURL">
+            <input type="hidden" name="InCMD" value="https://tv.cctv.com/live/cctv3">
+            <input type="submit" value="&#x270B CCTV3 综艺" class="button">
+            </form>
+        
+            <form action="/" method="post">
+            <input type="hidden" name="CmdType" value="JsonURL">
+            <input type="hidden" name="InCMD" value="https://tv.cctv.com/live/cctv4">
+            <input type="submit" value="&#x270B CCTV4 亚洲新闻" class="button">
+            </form>
+        
+            <form action="/" method="post">
+            <input type="hidden" name="CmdType" value="JsonURL">
+            <input type="hidden" name="InCMD" value="https://tv.cctv.com/live/cctv5">
+            <input type="submit" value="&#x270B CCTV5 体育" class="button">
+            </form>
+        
+            <form action="/" method="post">
+            <input type="hidden" name="CmdType" value="SendKeys">
+            <input type="hidden" name="InCMD" value="ctrl w">
+            <input type="submit" value="&#x270B CloseTab" class="button">
+            </form>
+        
+            <form action="/" method="post">
+            <input type="hidden" name="CmdType" value="SendKeys">
+            <input type="hidden" name="InCMD" value="ctrl W||Ctrl Shift T">
+            <input type="submit" value="&#x270B Close2Tab" class="button">
+            </form>
+        
+            <form action="/" method="post">
+            <input type="hidden" name="CmdType" value="OSCMD">
+            <input type="hidden" name="InCMD" value="ping 192.168.1.101">
+            <input type="submit" value="&#x270B Ping" class="button">
+            </form>
+        
+        </div>
+    
+    </div>
+    </body>
+    </html>
+    

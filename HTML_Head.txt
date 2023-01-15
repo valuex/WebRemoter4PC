@@ -1,0 +1,42 @@
+  <meta http-equiv="=Content-Type" content="text/html"; charset="UTF-8"/>
+    <style type="text/css">
+        body {background-color:white;}
+        p {color:blue;}
+        tr, td {
+            border-style:solid;
+            border-color: #96D4D4;
+            }
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-gap: 1rem;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          }
+          .button {
+          background-color: dodgerblue;
+          color: white;
+          padding: 1rem;
+          height: 10rem;
+          font-size:2.5rem;
+          white-space:normal;
+          border-radius:1rem;
+        }
+        #in_cmd{
+          position: relative;
+          padding-top: 5rem;
+          /* padding: 5rem; */
+          height: 10rem;
+          width: 50rem;
+          font-size:4rem;
+        }
+        .BtnSubmitTextCmd{
+          padding: 1rem;
+          height: 10rem;
+          font-size:4rem;
+        }
+        </style>
+  <script>
+
+  </script>
+<title>网页遥控器</title>

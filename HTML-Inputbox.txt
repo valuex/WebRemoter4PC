@@ -1,0 +1,18 @@
+<div class="container">
+    <form action="/" method="post">
+    <nobr>
+      <table>
+        <tr>
+          <td><label>语音命令</label>
+          </td>
+          <td>
+      <input type="hidden" name="CmdType" value="JsonURL">
+      <input type="text" id="in_cmd" name="InCMD" class="inbox"><br><br>
+    </td>
+    <td>
+      <input type="submit" value="提交" class="BtnSubmitTextCmd"></td>
+    </tr>
+    </table>
+  </nobr>
+</form> 
+  </div>

@@ -1,0 +1,83 @@
+[
+    {
+        "id": "1",
+        "CmdType": "JsonURL",
+        "CMDUniqueName": "CCTV1",
+        "CMDNickName": {},
+        "CMDContent": "https://tv.cctv.com/live/cctv1",
+        "ShowInHomePage":"True",
+        "ShowName":"CCTV1 综合",
+        "CMDTextIcon":"&#x270B"
+    },
+    {
+        "id": "2",
+        "CmdType": "JsonURL",
+        "CMDUniqueName": "CCTV2",
+        "CMDNickName": {},
+        "CMDContent": "https://tv.cctv.com/live/cctv2",
+        "ShowInHomePage":"True",
+        "ShowName":"CCTV2 财经",
+        "CMDTextIcon":"&#x270B"
+
+    },
+    {
+        "id": "3",
+        "CmdType": "JsonURL",
+        "CMDUniqueName": "CCTV3",
+        "CMDNickName": {},
+        "CMDContent": "https://tv.cctv.com/live/cctv3",
+        "ShowInHomePage":"True",
+        "ShowName":"CCTV3 综艺",
+        "CMDTextIcon":"&#x270B"
+    },
+    {
+        "id": "4",
+        "CmdType": "JsonURL",
+        "CMDUniqueName": "CCTV4",
+        "CMDNickName": {},
+        "CMDContent": "https://tv.cctv.com/live/cctv4",
+        "ShowInHomePage":"True",
+        "ShowName":"CCTV4 亚洲新闻",
+        "CMDTextIcon":"&#x270B"
+    },
+    {
+        "id": "5",
+        "CmdType": "JsonURL",
+        "CMDUniqueName": "CCTV1",
+        "CMDNickName": {},
+        "CMDContent": "https://tv.cctv.com/live/cctv5",
+        "ShowInHomePage":"True",
+        "ShowName":"CCTV5 体育",
+        "CMDTextIcon":"&#x270B"
+    },
+    {
+        "id": "6",
+        "CmdType": "SendKeys",
+        "CMDUniqueName": "CloseTab",
+        "CMDNickName": {},
+        "CMDContent": "ctrl w",
+        "ShowInHomePage":"True",
+        "CMDTextIcon":"&#x270B",
+        "ShowName":"CloseTab"
+    },
+    {
+        "id": "7",
+        "CmdType": "SendKeys",
+        "CMDUniqueName": "Close2Tab",
+        "CMDNickName": {},
+        "CMDContent": "ctrl W||Ctrl Shift T",
+        "ShowInHomePage":"True",
+        "ShowName":"Close2Tab",
+        "CMDTextIcon":"&#x270B"
+    },
+    {
+        "id": "8",
+        "CmdType": "OSCMD",
+        "CMDUniqueName": "Ping",
+        "CMDNickName": {},
+        "CMDContent": "ping 192.168.1.101",
+        "ShowInHomePage":"True",
+        "ShowName":"Ping",
+        "CMDTextIcon":"&#x270B"
+    }
+]
