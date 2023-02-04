@@ -9,11 +9,12 @@ Inspired by [**ZoomRemote**](https://github.com/khbroadcasting/ZoomRemote/)
 - **webserver-cli**.py: main file to start http server
 - **GenHTML.py**: generate index.html file from Config.json automatically
 - **Config.json**:  setting user commands
+- **SearchEngine.json**: setting user search engines
 - **others**
 - HTML_Head.txt: html snippet for generating head of index.html
 - HTML-Inputbox.txt: html snippet for generating inputbox of index.html
 # Usage
-1. config your commands in the Config.json file
+1. config your commands in the Config.json file or your search engines in the SearchEngine.json  
 2. run GenHTML.py to generate index.html
 3. run webserver-cli on your PC to start http server. 
 4. then visit http://127.0.0.1 in the browser on your ServerPC
