@@ -17,7 +17,7 @@ Inspired by [**ZoomRemote**](https://github.com/khbroadcasting/ZoomRemote/)
 1. config your commands in the Config.json file or your search engines in the SearchEngine.json  
 2. run GenHTML.py to generate index.html
 3. run webserver-cli on your PC to start http server. 
-4. then visit http://127.0.0.1 in the browser on your ServerPC
+4. then visit http://127.0.0.1:8002/ in the browser on your ServerPC
 5. or visit http://your_ServerPC_ip:8002/ with your mobile phone or tablet
 
 # How to set the commands in Config.json
