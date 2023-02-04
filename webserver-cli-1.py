@@ -32,6 +32,8 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
             if "JsonURL" in keys[0]:
                 if "http" in CMDContent:
                     os.startfile(CMDContent)
+                elif "搜索" in CMDContent:
+                    self.SearchKeywords(CMDContent)
                 else:
                     self.search_CDM("JsonURL", CMDContent)
             elif "SendKeys" in keys[0]:
@@ -57,12 +59,12 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
             CMDUniqueName=iDic['CMDUniqueName']
             CMDContent=iDic['CMDContent']
             CMDNickName=iDic['CMDNickName']  
-            CmdType=iDic['CmdType']  
+            CmdType=iDic['CmdType']
             if keyword in CMDUniqueName and InCMDType in CmdType:
                 os.startfile(CMDContent)
                 CMDExcuted=1
                 break
-            elif keyword in CMDNickName and InCMDType in CmdType:
+            elif any(keyword in s for s in CMDNickName) and InCMDType in CmdType:
                 os.startfile(CMDContent)
                 CMDExcuted=1
                 break        
@@ -79,6 +81,35 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
                 self.send_local(self.path)
                 return
         super().do_GET()
+
+    def SearchKeywords(self,keyword):
+        # keyword="用谷歌搜索这个"
+        SearchKwPos=keyword.find("搜索")
+        SearchKw=keyword[SearchKwPos+2:]
+        if SearchKwPos==0:
+            os.startfile("https://www.google.com/search?q="+SearchKw)
+        elif "百度搜索" in keyword:
+            os.startfile("http://www.baidu.com/s?wd="+SearchKw)
+        elif "谷歌搜索" in keyword:
+            os.startfile("https://www.google.com/search?q="+SearchKw)
+        elif "google搜索" in keyword.lower():
+            os.startfile("https://www.google.com/search?q="+SearchKw)
+        elif "搜狗搜索" in keyword:
+            os.startfile("https://www.sogou.com/web?query="+SearchKw)
+        elif "爱奇艺搜索" in keyword:
+            os.startfile("https://so.iqiyi.com/so/q_"+SearchKw+"?source=suggest")
+        elif "优酷搜索" in keyword:
+            os.startfile("https://so.youku.com/search_video/q_"+SearchKw+"?searchfrom=4")
+        elif "腾讯视频搜索" in keyword:
+            os.startfile("https://v.qq.com/x/search/?q="+SearchKw)
+        elif "b站搜索" in keyword.lower():
+            os.startfile("https://www.google.com/search?q="+SearchKw)
+        elif "youtube搜索" in keyword.lower():
+            os.startfile("https://www.youtube.com/results?search_query="+SearchKw)
+        elif "央视搜索" in keyword:
+            os.startfile("https://search.cctv.com/search.php?qtext="+SearchKw+"&type=video")
+        else:
+            os.startfile("https://www.google.com/search?q="+SearchKw)
 
     def send_local(self, path):
         if path == '/favicon.png':
