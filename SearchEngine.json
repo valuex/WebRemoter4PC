@@ -1,0 +1,13 @@
+{
+    "Default": "https://www.google.com/search?q={SearchKw}",
+    "百度": "http://www.baidu.com/s?wd={SearchKw}",
+    "谷歌": "https://www.google.com/search?q={SearchKw}",
+    "google": "https://www.google.com/search?q={SearchKw}",
+    "搜狗": "https://www.sogou.com/web?query={SearchKw}",
+    "爱奇艺": "https://so.iqiyi.com/so/q_{SearchKw}?source=suggest",
+    "优酷": "https://so.youku.com/search_video/q_{SearchKw}?searchfrom=4",
+    "腾讯视频": "https://v.qq.com/x/search/?q={SearchKw}",
+    "b站": "https://search.bilibili.com/all?keyword={SearchKw}",
+    "youtube": "https://www.youtube.com/results?search_query={SearchKw}",
+    "央视": "https://search.cctv.com/search.php?qtext={SearchKw}&type=video"
+}
