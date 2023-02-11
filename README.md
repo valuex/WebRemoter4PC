@@ -53,10 +53,11 @@ using your phone or pad's voice IME to input the command into the command-box an
 **Python HTTP Server to Remote Control Zoom Videoconferencing**
 
 # Features
-* Voice controll is supported. HAH
-* Plenty of terminals are supported, all needed is one browser
-* One-click, portable.
-* Easy to understand help screen for non-technical users.
+* Voice controll is supported by using your voice input IME. :-D
+* support to define user preferred search engine
+* Multiple users are supported
+* One-click, no need to install app on user's mobilephone, all needed is one browser.
+* Easy to use for non-technical users.
 * Completely customizable.
   * Appearance
   * Functions
