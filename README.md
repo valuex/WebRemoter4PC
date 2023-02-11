@@ -47,7 +47,12 @@ one piece of command looks like this:
 * ShowInHomePage: whether this command will be shown in index.html or not
 * ShowName: if the command is shown, the text will be presented
 * CMDTextIcon: some ascii to be shown as icon for this command
-==========
+# How to config search engine in ```SearchEngine.json```
+add one row like this: 
+```
+"google": "https://www.google.com/search?q={SearchKw}"
+```
+```{SearchKw}``` is the keyword to be searched  
 # Voice control
 using your phone or pad's voice IME to input the command into the command-box and sumbit. Bingo!
 **Python HTTP Server to Remote Control Zoom Videoconferencing**
