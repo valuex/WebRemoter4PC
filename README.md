@@ -1,4 +1,5 @@
-# WebRemoter4PC
+[中文说明](https://github.com/valuex/WebRemoter4PC/blob/main/README_CN.md)
+# WebRemoter4PC 
 Web Remotor For PC: control your PC by any web browser on your mobile phone, pad, etc.  
 You can controll your PC (The PC is called ServerPC) by any terminal (these terminals are named ClientTerminal), like mobile phone, pad, or other PC, only a browser is needed.  
 The ClientTerminal shall be in the same local network with the ServerPC.  
