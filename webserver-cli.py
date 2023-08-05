@@ -1,10 +1,12 @@
 # -*- coding: UTF-8 -*- 
 from http.server import SimpleHTTPRequestHandler
 import socket, os, socketserver
-from pyautogui import hotkey
+# from pyautogui import hotkey
+import pyautogui
 from base64 import b64decode
 from urllib.parse import urlparse,unquote
 import json
+import pyperclip
 
 PORT = 8002
 def get_cmd_list(filename):
@@ -14,6 +16,15 @@ def get_cmd_list(filename):
     return dic
 CMDList=get_cmd_list('Config.json')
 EngineList=get_cmd_list('SearchEngine.json')
+
+def PasteInto(SearchKw):
+    saved_clip=pyperclip.paste()  
+    pyperclip.copy(SearchKw)
+    pyautogui.hotkey("ctrl","v")
+    pyperclip.copy(saved_clip)
+    saved_clip=""
+
+
 
 def default_search(SearchKw):
     DefaultEngine= EngineList["Default"] 
@@ -31,7 +42,7 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
         content_length = int(self.headers['Content-Length'])
         post_data = unquote(self.rfile.read(content_length)).strip()
         post_data = post_data.replace("。","")
-        print(unquote(post_data))
+        # print(unquote(post_data))
         keys = [key.split('=')[1] for key in post_data.split('&')]
         CMDContent=''.join(keys[1])
         if self.path in['/', '/index.html']:
@@ -47,7 +58,7 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
                 KeySeq=CMDContent.split('||')  
                 for iKey in KeySeq:
                     keys = iKey.lower().split('+') #in the format of list['ctrl','w']
-                    hotkey(*keys)  # convert list into string sequence
+                    pyautogui.hotkey(*keys)  # convert list into string sequence
             elif "OSCMD" in keys[0]:
                 try:
                     os.startfile(CMDContent)
@@ -75,7 +86,8 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
                 CMDExcuted=1
                 break        
         if CMDExcuted==0:
-            default_search(keyword)
+            PasteInto(keyword)
+            # default_search(keyword)
             # os.startfile("https://www.google.com/search?q="+keyword)
     def do_GET(self):
         query = urlparse(self.path).query
@@ -111,7 +123,8 @@ class MyRequestHandler(SimpleHTTPRequestHandler):
                 FindEngine=1
                 break
         if FindEngine==0:
-                default_search(SearchKw)
+                # default_search(SearchKw)
+                PasteInto(SearchKw)
                 # SearchCMD=DefaultEngine.replace("{SearchKw}",SearchKw)
                 # os.startfile(SearchCMD)
 
